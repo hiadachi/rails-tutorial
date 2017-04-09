@@ -40,7 +40,6 @@ $ rails server
 詳しくは、[*Ruby on Rails チュートリアル*](http://railstutorial.jp/)を参考にしてください。
 
 
-
 # README
 
 This README would normally document whatever steps are necessary to get the
