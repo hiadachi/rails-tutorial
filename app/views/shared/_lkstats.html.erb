@@ -1,0 +1,9 @@
+<% @micropost ||= current_micropost %>
+<div class="lkstats">
+  <a href="<%= like_path(@micropost) %>">
+    <strong id="liked" class="stat">
+      <%= @micropost.likes.count %>
+    </strong>
+    Liked
+  </a>
+</div>

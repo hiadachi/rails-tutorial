@@ -21,6 +21,22 @@ class MicropostsController < ApplicationController
     redirect_back(fallback_location: root_url)
   end
   
+  def likedby
+    @title = "Liked by"
+    @micropost  = Micropost.find(params[:id])
+    @users = @micropost.likes.paginate(page: params[:page])
+    render 'show_like'
+  end
+
+  ####Sample####
+  # def following
+  #   @title = "Following"
+  #   @user  = User.find(params[:id])
+  #   @users = @user.following.paginate(page: params[:page])
+  #   render 'show_follow'
+  # end
+  
+  
   private
 
   def micropost_params
